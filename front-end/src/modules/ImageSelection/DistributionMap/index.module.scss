@@ -1,0 +1,49 @@
+.distribution-map-content {
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 220, 220);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .topline {
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .text-prompt {
+      font-size: 14px;
+      .word-input {
+        width: 70px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      :global {
+        .ant-input:focus,
+        .ant-input:hover {
+          border: 1px solid rgb(119, 119, 119) !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+    .get-ImageData-button {
+      width: 40px;
+      height: 32px;
+      font-size: 14px;
+      background-color: rgb(180, 180, 180);
+      color: white;
+      font-weight: bolder;
+      border: none;
+      border-radius: 5px;
+    }
+    .get-ImageData-button:hover {
+      background-color: rgb(220, 220, 220);
+      cursor: pointer;
+    }
+  }
+}

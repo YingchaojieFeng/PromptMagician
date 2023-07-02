@@ -1,0 +1,227 @@
+.local-exploration-panel {
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .result-details {
+    margin-top: 15px;
+    width: 100%;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    .result-details-title {
+      font-size: 20px;
+      color: rgb(119, 119, 119);
+      font-weight: bolder;
+    }
+    .result-details-area {
+      margin-top: 10px;
+      height: calc(100% - 11px);
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 5px;
+      overflow-y: auto;
+      .result-details-item {
+        padding: 10px;
+        height: 140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px dashed rgb(220, 220, 220);
+        .result-details-item-img {
+          width: 140px;
+          height: 140px;
+        }
+        .result-details-item-description {
+          width: 290px;
+          height: 140px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .result-details-item-prompt {
+            width: 290px;
+            height: 105px;
+            .result-details-item-prompt-title {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              .result-details-item-prompt-title-text {
+                font-size: 16px;
+                font-weight: bolder;
+                color: rgb(119, 119, 119);
+              }
+              .result-details-item-prompt-title-like {
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+              }
+            }
+            .result-details-item-prompt-data {
+              font-size: 14px;
+              color: rgb(178, 178, 178);
+              height: 85px;
+              overflow: hidden;
+            }
+            .result-details-item-prompt-data:hover {
+              overflow-y: overlay;
+            }
+            .result-details-item-prompt-data::-webkit-scrollbar {
+              width: 12px;
+              height: 1px;
+            }
+            .result-details-item-prompt-data::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              background-color: rgba(85, 85, 85, 0.43);
+              border: 4px solid transparent;
+              background-clip: padding-box;
+            }
+          }
+          .result-details-item-parameters {
+            width: 290px;
+            height: 35px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .result-details-item-parameters-item {
+              width: 145px;
+              height: 40px;
+              .result-details-item-parameters-item-title {
+                font-size: 14px;
+                font-weight: bolder;
+                color: rgb(119, 119, 119);
+              }
+              .result-details-item-parameters-item-data {
+                font-size: 14px;
+                font-weight: bolder;
+                color: rgb(178, 178, 178);
+              }
+            }
+          }
+        }
+      }
+    }
+    .result-details-area::-webkit-scrollbar {
+      width: 12px;
+      height: 1px;
+    }
+    .result-details-area::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgba(85, 85, 85, 0.43);
+      border: 4px solid transparent;
+      background-clip: padding-box;
+    }
+  }
+  .related-keywords {
+    margin-top: 10px;
+    width: 100%;
+    height: 37%;
+    display: flex;
+    flex-direction: column;
+    .related-keywords-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .related-keywords-title-text {
+        font-size: 20px;
+        color: rgb(119, 119, 119);
+        font-weight: bolder;
+      }
+      .related-keywords-title-copy {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .related-keywords-title-button {
+          width: 16px;
+          height: 16px;
+        }
+        .related-keywords-title-hint {
+          font-size: 15px;
+          color: rgb(119, 119, 119);
+        }
+      }
+      .related-keywords-title-copy {
+        cursor: pointer;
+      }
+    }
+    .related-keywords-area {
+      width: 472px;
+      margin-top: 10px;
+      height: 95%;
+      background-color: white;
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 5px;
+      position: relative;
+      .related-keywords-largeImage {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+      }
+      .related-keywords-relation {
+        width: 472px;
+        height: 325px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        .related-keywords-relation-keywordsChart {
+          width: 130px;
+          height: 350px;
+        }
+        .related-keywords-relation-imagesChart {
+          width: 342px;
+          height: 350px;
+          overflow: hidden;
+        }
+        .related-keywords-relation-imagesChart:hover {
+          overflow-x: auto;
+        }
+        .related-keywords-relation-imagesChart::-webkit-scrollbar {
+          width: 1px;
+          height: 12px;
+          background-color: transparent;
+        }
+        .related-keywords-relation-imagesChart::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: rgba(85, 85, 85, 0.43);
+          border: 4px solid transparent;
+          background-clip: padding-box;
+        }
+      }
+    }
+
+    .related-keywords-area::-webkit-scrollbar {
+      width: 12px;
+      height: 1px;
+    }
+    .related-keywords-area::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgba(85, 85, 85, 0.43);
+      border: 4px solid transparent;
+      background-clip: padding-box;
+    }
+  }
+  .guidance-scale {
+    margin-top: 10px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    .guidance-scale-title {
+      font-size: 20px;
+      color: rgb(119, 119, 119);
+      font-weight: bolder;
+    }
+    .guidance-scale-area {
+      margin-top: 10px;
+      height: 85%;
+      background-color: white;
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 5px;
+    }
+  }
+}

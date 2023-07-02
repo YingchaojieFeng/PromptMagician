@@ -1,0 +1,117 @@
+.parameter-configration-panel {
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .prompt {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    .prompt-title {
+      font-size: 20px;
+      color: rgb(119, 119, 119);
+      font-weight: bolder;
+    }
+    .prompt-textarea {
+      margin-top: 5px;
+    }
+    :global {
+      .ant-input:focus,
+      .ant-input:hover {
+        border: 1px solid rgb(119, 119, 119) !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .guidance-scale {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    .guidance-scale-title {
+      font-size: 20px;
+      color: rgb(119, 119, 119);
+      font-weight: bolder;
+    }
+    .guidance-scale-slider {
+      margin-top: 20px;
+    }
+    .guidance-scale-hint {
+      font-size: 12px;
+      color: rgb(119, 119, 119);
+    }
+    :global {
+      .ant-slider-rail {
+        background-color: rgb(220, 220, 220);
+      }
+      .ant-slider-track {
+        background-color: rgb(119, 119, 119);
+      }
+      .ant-slider-handle::after {
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 0 2px rgb(119, 119, 119);
+      }
+    }
+  }
+  .random-seed {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    .random-seed-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .random-seed-title-text {
+        font-size: 20px;
+        color: rgb(119, 119, 119);
+        font-weight: bolder;
+      }
+      .random-seed-title-hint {
+        margin-left: 10px;
+        font-size: 12px;
+        color: rgb(119, 119, 119);
+      }
+    }
+    .random-seed-generation {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      .random-seed-input {
+        width: 250px;
+      }
+      :global {
+        .ant-input {
+          width: 220px;
+        }
+        .ant-input:focus,
+        .ant-input:hover {
+          border: 1px solid rgb(119, 119, 119) !important;
+          box-shadow: none !important;
+        }
+      }
+
+      .random-seed-button {
+        width: 130px;
+        font-size: 20px;
+        background-color: rgb(180, 180, 180);
+        color: white;
+        font-weight: bolder;
+        border: none;
+        border-radius: 5px;
+      }
+      .random-seed-button:hover {
+        background-color: rgb(220, 220, 220);
+        cursor: pointer;
+      }
+    }
+  }
+}

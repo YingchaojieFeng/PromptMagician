@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Phosphate-Inline";
+  src: url("../assets/font/Phosphate.ttc");
+}
+
+.page {
+  width: 1920px;
+  height: 1080px;
+  .header {
+    height: 48px;
+    background-color: rgb(73, 73, 73);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .main-header {
+      color: white;
+      font-size: 32px;
+      line-height: 48px;
+      padding-left: 20px;
+      font-family: "Phosphate-Inline";
+    }
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      padding-right: 20px;
+
+      .header-content-text {
+        color: white;
+        font-size: 24px;
+        line-height: 48px;
+        font-family: "Phosphate-Inline";
+      }
+      .header-divider {
+        width: 1px;
+        height: 30px;
+        margin: 9px 18px;
+        background-color: white;
+      }
+      .header-content-icon {
+        color: white;
+        font-size: 24px;
+        line-height: 48px;
+      }
+    }
+  }
+  .wrapper {
+    height: 1028px;
+    border: solid 2px rgb(73, 73, 73);
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: space-between;
+    .left-column {
+      width: 417px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .left-top {
+        width: 100%;
+        height: 425px;
+        background-color: white;
+      }
+      .left-bottom {
+        width: 100%;
+        height: 600px;
+        background-color: white;
+      }
+    }
+    .center-column {
+      width: 980px;
+      height: 100%;
+      background-color: white;
+    }
+    .right-column {
+      width: 512px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: white;
+    }
+  }
+}
