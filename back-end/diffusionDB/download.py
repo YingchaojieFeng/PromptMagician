@@ -9,7 +9,7 @@ import clip
 
 def load_data():
     try:
-        dataset = load_dataset('poloclub/diffusiondb', '2m_all')
+        dataset = load_dataset('poloclub/diffusiondb', '2m_first_100k')
     except Exception as e:
         load_data()
 load_data()

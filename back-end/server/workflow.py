@@ -1,14 +1,11 @@
 import torch
 import clip
-import faiss
 import math
 import pickle
 from tqdm import tqdm
-import faiss.contrib.torch_utils
 from random import choice
 from PIL import Image
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 import datasets
 from util import *
@@ -62,7 +59,7 @@ def load_and_encode_pickle_data(num_batch, save_dir, encode_model):
 	filter_text_list, db_id_list = [], []
 
 	for i in tqdm(range(num_batch)):
-		process_image_batch, process_text_batch = load_data_from_pickle(save_path=save_dir+str(i+1)+'.pickle')
+		process_image_batch, process_text_batch = load_data_from_pickle(save_path=save_dir+'part-'+str(i+1)+'.pickle')
 		filter_image_batch, filter_text_batch = [], []
 		for j in range(batch_size):
 			if not contains_chinese(process_text_batch[j]) and not contains_special_word(process_text_batch[j]) and not contains_special_chars(process_text_batch[j]):
@@ -191,13 +188,10 @@ if __name__ == '__main__':
 	batch_size = 1000
 
 	for i in tqdm(range(int(num_images/batch_size))):
-		# img_batch, process_image_batch, text_batch, process_text_batch, seed_batch, cfg_batch = load_data(batch_size, preprocess_img, preprocess_text, start_index=i*batch_size)
 		process_image_batch, process_text_batch = load_data(batch_size, preprocess_img, preprocess_text, start_index=i*batch_size)
 		save_data([process_image_batch, process_text_batch], save_path='../.cache/diffusiondb-process/part-'+str(i+1)+'.pickle')
 
-	image_features, text_features, combined_features, db_id_list = load_and_encode_pickle_data(num_batch=int(num_images/batch_size))
-	print('image_features', image_features.shape)
-	print('text_features', text_features.shape)
-	print('combined_features', combined_features.shape)
-	print('db_id_list', db_id_list[: 30])
-	
+	image_features, text_features, combined_features, filter_text_list, db_id_list = load_and_encode_pickle_data(
+		num_batch=int(num_images/batch_size), save_dir='../.cache/diffusiondb-process/', encode_model=model)
+	save_data([image_features, text_features, combined_features, filter_text_list, db_id_list], 
+		save_path='../.cache/diffusiondb-feature/feature.pickle')
