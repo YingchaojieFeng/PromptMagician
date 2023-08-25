@@ -1,6 +1,6 @@
 # PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation
 
-[Paper](https://arxiv.org/abs/2307.09036) | Authors: [Yingchaojie Feng](https://yingchaojiefeng.github.io/), [Xingbo Wang](https://andy-xingbowang.com/), [Kam Kwai Wong](https://jasonwong.vision/), Sijia Wang, Yuhong Lu, Minfeng Zhu, Baicheng Wang, [Wei Chen](http://www.cad.zju.edu.cn/home/chenwei/)
+[**Paper**](https://arxiv.org/abs/2307.09036) | Authors: [Yingchaojie Feng](https://yingchaojiefeng.github.io/), [Xingbo Wang](https://andy-xingbowang.com/), [Kam Kwai Wong](https://jasonwong.vision/), Sijia Wang, Yuhong Lu, Minfeng Zhu, Baicheng Wang, [Wei Chen](http://www.cad.zju.edu.cn/home/chenwei/)
 
 ![](figures/Teaser.jpg)
 
