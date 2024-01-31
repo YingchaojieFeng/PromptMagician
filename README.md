@@ -49,8 +49,11 @@ If this paper and tool helps your research projects, please considering citing o
 @article{feng2023promptmagician,
   title={PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation},
   author={Feng, Yingchaojie and Wang, Xingbo and Wong, Kam Kwai and Wang, Sijia and Lu, Yuhong and Zhu, Minfeng and Wang, Baicheng and Chen, Wei},
-  journal={arXiv},
-  year={2023},
-  doi={10.48550/arXiv.2307.09036},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  volume={30},
+  number={1},
+  pages={295--305},
+  year={2024},
+  doi={10.1109/TVCG.2023.3327168}
 }
 ```
